@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <div className="text-center max-w-xl mx-auto">
       <h1 className="text-4xl font-bold my-8 text-sky-500">Todo App</h1>
-      <ul className="my-6 h-[70vh] overflow-auto border-gray-800 border-2">
+      <ul className=" h-[60vh] overflow-auto border-gray-800 border-2">
         {list.length == 0 ? (
           <h2 className="text-3xl my-20">Your todo list is empty</h2>
         ) : (
@@ -46,7 +46,7 @@ export default function Home() {
           ))
         )}
       </ul>
-      <div className="text-xl font-semibold flex items-end">
+      <div className="text-xl font-semibold flex items-end my-1">
         <input
           className="bg-gray-200 p-3 w-full text-gray-800"
           value={input}
