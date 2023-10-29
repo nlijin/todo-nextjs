@@ -21,11 +21,11 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-start  ">
+    <div className="text-center w-96">
       <h1 className="text-2xl font-bold my-4 border-red-600">TodoList</h1>
-      <div className="text-xl font-semibold max-w-md flex flex-nowrap">
+      <div className="text-xl font-semibold flex flex-col border-gray-800 border-2">
         <input
-          className="bg-gray-500 p-3 min-w-min"
+          className="bg-gray-500 p-3 w-70%"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => {
@@ -33,6 +33,7 @@ export default function Home() {
               addTodo(input);
             }
           }}
+          placeholder="Add a task"
         />
         <button
           className="bg-green-500 p-3 w-30%"
@@ -42,7 +43,7 @@ export default function Home() {
         </button>
         <ul className="my-6">
           {list.map((todo) => (
-            <li key={todo.id} className="flex justify-between p-2 my-4">
+            <li key={todo.id} className="flex justify-between p-2 my-4 ">
               {todo.todo}
               <button
                 className="bg-red-400 px-3"
